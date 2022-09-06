@@ -50,8 +50,8 @@ async function scheduleNotification() {
           subtitle: "We can't have babies!!!",
         },
         trigger: {
-          hour: 23,         /// ALTERAR O HORARIO AQUI
-          minute: 41,
+          hour: 9,         /// ALTERAR O HORARIO AQUI
+          minute: 15,
           repeats: true,
         },
       });
@@ -138,10 +138,10 @@ export default function App() {
         />
       ) : null}
 
-      <View style={styles.waterGoalContainer}>
+      <View style={styles.pillContainer}>
         <Text
           style={[
-            styles.blueText,
+            styles.pinkText,
             { fontSize: 22, textShadow: "rgb(0 0 0 / 26%) 1px 1px 8px" },
           ]}
         >
@@ -196,6 +196,7 @@ export default function App() {
 
       <Button
         title={tomei ? "Destomar" : "Tomar"}
+        color="pink"
         onPress={() => btnAction()}
       />
     </SafeAreaView>
@@ -215,26 +216,14 @@ const styles = StyleSheet.create({
     height: 300,
     justifyContent: "flex-end",
   },
-  waterButtonsContainer: {
-    flexDirection: "row",
-    paddingVertical: 10,
-    width: "90%",
-    justifyContent: "space-between",
-  },
-  waterGoalContainer: {
+  pillContainer: {
     padding: 50,
     alignItems: "center",
   },
-  blueText: {
+  pinkText: {
     color: "#efb2bd",
     fontWeight: "600",
   },
   grayText: { color: "#323033", fontWeight: "600" },
-  notificationButton: {
-    height: 50,
-    borderRadius: 20,
-    justifyContent: "center",
-    padding: 7,
-  },
   notificationText: { color: "white", fontWeight: "500", fontSize: 16 },
 });
